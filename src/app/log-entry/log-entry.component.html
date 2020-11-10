@@ -1,0 +1,4 @@
+<p *ngIf="index < 4; else fromFifth">{{timestamp}}</p>
+<ng-template #fromFifth>
+  <p [ngClass]="{fromFifth: true}" [ngStyle]="{'color': 'white'}">{{timestamp}}</p>
+</ng-template>

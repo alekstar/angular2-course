@@ -1,0 +1,11 @@
+<button class="btn btn-primary"
+        (click)="buttonClicked()">
+  Display details
+</button>
+<p *ngIf="isParagraphShown">Secret Password = tuna</p>
+<hr>
+<p>Log:</p>
+<app-log-entry *ngFor="let entry of buttonClicks; let i = index"
+               [timestamp]="entry"
+               [index]="i">
+</app-log-entry>
