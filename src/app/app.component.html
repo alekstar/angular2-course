@@ -12,6 +12,20 @@
         <li>Simply output Odd - NUMBER or Even - NUMBER in the two components</li>
         <li>Style the element (e.g. paragraph) holding your output text differently in both components</li>
       </ol>
+
+      <hr>
+
+      <app-game-control (numberUpdated)="numberUpdated($event)"></app-game-control>
+
+      <hr>
+      <div class="row">
+      <div class="col-md-5">
+        <app-odd *ngFor="let number of odds" [number]="number"></app-odd>
+      </div>
+      <div class="col-md-7">
+        <app-even *ngFor="let number of evens" [number]="number"></app-even>
+      </div>
+      </div>
     </div>
   </div>
 </div>
